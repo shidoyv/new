@@ -1,15 +1,11 @@
-/* ============================================================
-   biography.css — PPLG Biography Page
-   ============================================================ */
 
-/* ── Reset ─────────────────────────────────────────────────── */
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ── CSS Variables ──────────────────────────────────────────── */
 :root {
     --red:   #AC2A2A;
     --gold:  #FF9D00;
@@ -19,15 +15,11 @@
     --BALL:  70px;
 }
 
-/* ── Base ───────────────────────────────────────────────────── */
 body {
     font-family: 'Lato', sans-serif;
     background: var(--cream);
 }
 
-/* ══════════════════════════════════════════════════════════════
-   NAVBAR
-══════════════════════════════════════════════════════════════ */
 .navbar-wrap {
     display: flex;
     justify-content: center;
@@ -70,9 +62,6 @@ nav a.active {
     font-weight: 700;
 }
 
-/* ══════════════════════════════════════════════════════════════
-   HERO
-══════════════════════════════════════════════════════════════ */
 .hero {
     background: #C4A077 url("library.jpg") center / cover no-repeat;
     position: relative;
@@ -82,7 +71,6 @@ nav a.active {
     min-height: 100vh;
 }
 
-/* warm tint overlay — sits above bg image, below SVG panels */
 .hero::after {
     content: '';
     position: absolute;
@@ -92,13 +80,6 @@ nav a.active {
     z-index: 0;
 }
 
-/* ── SVG diagonal background panels ────────────────────────── */
-/*
-   Two SVG panels positioned absolute inside .hero.
-   Left  = warm brown diagonal
-   Right = light grey-blue diagonal
-   Each tab swaps the SVG innerHTML via JS.
-*/
 .hero-svg-left,
 .hero-svg-right {
     position: absolute;
@@ -118,7 +99,6 @@ nav a.active {
     display: block;
 }
 
-/* ── Hero card (grey rounded box) ───────────────────────────── */
 .hero-card {
     position: relative;
     z-index: 5;
@@ -133,7 +113,6 @@ nav a.active {
     overflow: visible;
 }
 
-/* ── Person display ─────────────────────────────────────────── */
 .person-wrap {
     position: relative;
     z-index: 5;
@@ -196,9 +175,6 @@ nav a.active {
     transform: translateX(20px) !important;
 }
 
-/* ══════════════════════════════════════════════════════════════
-   TABBAR
-══════════════════════════════════════════════════════════════ */
 .tabbar-outer {
     position: relative;
     z-index: 6;
@@ -223,21 +199,18 @@ nav a.active {
     margin-top: 10px;
 }
 
-/* ── Background circle behind ball (notch effect) ───────────── */
-/* Matches hero-card bg (#D9D9D9) so it blends seamlessly        */
 .ball-wrap {
     position: absolute;
     width: 117px;
     height: 90px;
-    border-radius: 0;        /* hapus border-radius */
-    background: transparent; /* hapus background */
+    border-radius: 0;        
+    background: transparent; 
     top: -45px;
     transition: left .42s cubic-bezier(.68, -.25, .27, 1.35);
     pointer-events: none;
     z-index: 9;
 }
 
-/* ── The sliding orange ball ────────────────────────────────── */
 .ball {
     position: absolute;
     width: var(--BALL);
@@ -260,7 +233,6 @@ nav a.active {
     display: block;
 }
 
-/* ── Each tab button ────────────────────────────────────────── */
 .tab {
     position: relative;
     z-index: 4;
@@ -304,9 +276,6 @@ nav a.active {
 /* Active label turns gold */
 .tab.active .t-label { color: var(--gold); }
 
-/* ══════════════════════════════════════════════════════════════
-   BIO SECTION
-══════════════════════════════════════════════════════════════ */
 .bio-section {
     background: var(--cream);
     padding: 60px 0 80px;
@@ -314,7 +283,7 @@ nav a.active {
 
 .bio-inner {
     width: 95%;
-    max-width: 1239px;  /* samain sama bio-card */
+    max-width: 1239px;
     margin: 0 auto;
 }
 
@@ -339,7 +308,6 @@ h2.bio-title {
     box-shadow: 8px 8px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* ── Panels ─────────────────────────────────────────────────── */
 .panel { display: none; }
 
 .panel.active {
@@ -361,7 +329,6 @@ h2.bio-title {
     to   { opacity: 1; transform: none; }
 }
 
-/* ── Bio entries ────────────────────────────────────────────── */
 .entry { margin-bottom: 22px; }
 .entry:last-child { margin-bottom: 0; }
 
@@ -384,9 +351,7 @@ h2.bio-title {
     line-height: normal;
 }
 
-/* ══════════════════════════════════════════════════════════════
-   FOOTER
-══════════════════════════════════════════════════════════════ */
+ */
 .footer{
 background:linear-gradient(#4a4a4a,#2f2f2f);
 color:white;
@@ -401,21 +366,16 @@ align-items:flex-start;
 gap:40px;
 }
 
-/* LOGO */
 .logo{
 width:90px;
 margin-bottom:10px;
 }
-
-/* LEFT */
 
 .footer-left{
 max-width:350px;
 font-size:14px;
 line-height:1.6;
 }
-
-/* CENTER */
 
 .footer-center{
 display:flex;
@@ -434,8 +394,6 @@ margin-bottom:10px;
 margin:6px 0;
 }
 
-/* BUTTON */
-
 .footer-center button{
 margin-top:12px;
 padding:7px 18px;
@@ -452,8 +410,6 @@ background:white;
 color:black;
 }
 
-/* RIGHT */
-
 .footer-right{
 max-width:300px;
 font-size:14px;
@@ -469,8 +425,6 @@ margin:40px auto 0;
 background:radial-gradient(rgba(255,255,255,0.2),transparent);
 filter:blur(10px);
 }
-
-/* COPYRIGHT */
 
 .copyright{
 margin-top:15px;
